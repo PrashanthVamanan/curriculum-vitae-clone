@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --heading-color: #f6f5f5;
+  --heading-bg-color: #d8e3e7;
+  --heading-text-color: #822659;
+  --icon-text-color: #f8efd4;
+  --intro-text-color: #bbbbbb;
+  --text-color: #d6e0f0;
+  --skill-box-color: #eff7e1;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: url('../img/ocean.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 20px;
+  color: var(--icon-text-color);
+}
+
+header p {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.basic-info, .social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.basic-info img,
+.social-links img {
+  filter: invert(100%);
+}
+
+.basic-info span,
+.social-links span {
+  color: var(--icon-text-color);
+}
+
+.basic-info img,
+.social-links img,
+.basic-info span,
+.social-links span {
+  margin: 0px 5px;
+}
+
+.social-links a {
+  color: var(--icon-text-color); 
+}
+
+.basic-info div:hover,
+.social-links div:hover,
+.experience-item p:hover{
+  cursor: pointer; 
+}
+
+main {
+  display: flex;
+  width: 900px;
+  margin: 0px auto;
+}
+
+main .left-side, main .right-side {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  padding: 20px;
+}
+
+.experience-item {
+  margin: 30px 0;
+}
+
+.heading {
+  text-align: center;
+  padding: 5px 0px;
+  background-color: var(--heading-bg-color);
+  color: var(--heading-text-color);
+}
+
+.experience-item .intro {
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.experience-item p {
+  font-size: 17px;
+}
+
+.experience-item p a {
+  color: var(--text-color);
+}
+
+.desc {
+  max-width: 90%;
+  margin: 15px 0;
+  text-align: justify;
+  color: var(--intro-text-color);
+  font-size: 17px;
+}
+
+ul li{
+  margin: 0 0 10px 15px;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-items div {
+  width: 90px;
+  height: 45px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  background-color: var(--skill-box-color);
+}
+
+.skill-items div p {
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.education {
+  font-size: 17px;
+}
+
+.education .college, .education .duration {
+  margin: 20px;
+  color: var(--intro-text-color);
+}
+
+.certificates ul {
+  margin: 0 0 15px 15px;
+  padding: 10px 0px;
+}
+
+.certificates ul li {
+  margin: 20px 0px;
+  font-size: 17px;
+}
+
+.certificates ul li a {
+  color: var(--intro-text-color);
+}
+
+.certificates ul li a:hover, .weather-app:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 920px) {
+  main {
+    width: 700px;
+  }
+  
+  main .left-side, main .right-side {
+    max-width: 50%;
+  }
+
+  .intro, .experience-item p {
+    text-align: center;
+  }
+
+  .skill-items {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 718px) {
+  header {
+    padding: 15px 0;
+  }
+
+  header, header p {
+    font-size: 17px;
+  }
+
+  main {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  main .left-side, main .right-side {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .heading {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .desc, .experience-item p, .certificates ul li, .education {
+    font-size: 18px;
+  }
+
+  .education {
+    text-align: center;
+  }
+
+  ul li{
+    margin: 0 0 20px 50px;
+  }
+
+  .certificates {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .basic-info, .social-links {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .basic-info div, .social-links div {
+    width: 100%;
+    text-align: center;
+    margin: 7px 0px;
+  }
+  
+  .basic-info img,
+  .social-links img,
+  .basic-info span,
+  .social-links span {
+    margin: 0px 5px;
+  }
+
+  header {
+    font-size: 14px;
+  }
+}
